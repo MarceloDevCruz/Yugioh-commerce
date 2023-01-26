@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #fff; }
+
+button {
+  cursor: pointer;
+  border: none; }
+
+a,
+a:link,
+a:visited {
+  cursor: pointer; }
+
+ul {
+  list-style: none; }
+
+hmtl {
+  font-size: 62,5%; }
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #87B1B7; }
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit; }
+
+a,
+a:link,
+a:visited {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit; }
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit; }

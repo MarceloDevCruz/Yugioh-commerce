@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-white;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a,
+a:link,
+a:visited {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+

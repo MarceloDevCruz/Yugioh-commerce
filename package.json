@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "yugioh-shop",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
+    "axios": "^1.2.4",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^10.1.0",
     "react": "^18.2.0",

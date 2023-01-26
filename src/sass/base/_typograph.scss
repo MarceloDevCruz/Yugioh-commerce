@@ -1,0 +1,33 @@
+hmtl {
+  font-size: 62,5%;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 300;
+  color: $color-secondary;
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+a,
+a:link,
+a:visited {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+

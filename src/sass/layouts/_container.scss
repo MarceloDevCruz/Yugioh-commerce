@@ -1,0 +1,15 @@
+.content {
+  min-height: 100vh;
+  height: 100%;
+
+  max-width: 140rem;
+  width: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-rows: 15rem 100vh 22rem;
+}
+
+.container {
+  overflow: hidden;
+}

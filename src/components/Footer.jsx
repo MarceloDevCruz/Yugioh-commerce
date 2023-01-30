@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__createdby">
         <p className="footer__createdby-text">By Marcelo Ferreira Cruz</p>
-        <BsGithub />
+        <BsGithub className="footer__icon" />
       </div>
       <ul className="footer__list">
         <li className="footer__list-item">Contact</li>

@@ -1,0 +1,16 @@
+.btn {
+
+
+
+  &-search {
+    position: absolute;
+    top: 44%;
+    right: 16%;
+    background-color: transparent;
+    color: $color-grey-light;
+
+    &__icon {
+      font-size: 1.7rem;
+    }
+  }
+}

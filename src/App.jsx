@@ -2,12 +2,14 @@ import React from 'react';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="background">
-      <div className="container">
+    <div className="container">
+      <div className="content">
         <Header />
+        <Home />
         <Footer />
       </div>
     </div>

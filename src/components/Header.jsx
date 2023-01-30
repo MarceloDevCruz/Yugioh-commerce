@@ -16,7 +16,7 @@ const Header = () => {
           placeholder="Procure por card..."
         />
         <button className="btn-search">
-          <BsSearch />
+          <BsSearch className="btn-search__icon" />
         </button>
       </form>
       <div className="header__card">
@@ -24,6 +24,7 @@ const Header = () => {
         <div className="header__card-container">
           <BsCart className="header__card-container__cart" />
           <BsFillCircleFill className="header__card-container__ball" />
+          <p className="header__card-container__lenght">10</p>
         </div>
       </div>
     </header>

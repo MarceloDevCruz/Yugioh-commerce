@@ -9,6 +9,14 @@
     background-color: transparent;
     color: $color-grey-light;
 
+    @include respond(tab-land) {
+      top: 38%;
+    }
+
+    @media only screen and (max-width: 350px) {
+      right: 2%;
+    }
+
     &__icon {
       font-size: 1.7rem;
     }

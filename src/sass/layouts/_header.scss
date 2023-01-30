@@ -6,15 +6,31 @@
   height: 15rem;
   border-bottom: 1px solid rgba($color-black, .6);
 
+  @include respond(tab-land) {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    height: 22rem;
+  }
+
   &__logo {
     grid-column: 1/2;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    @include respond(tab-land) {
+      margin-top: 1rem;
+      grid-row: 1/2;
+      grid-column: 1/-1;
+    }
+
     &-img {
       width: 20rem;
       cursor: pointer;
+
+      @include respond(tab-port) {
+        width: 15rem;
+      }
     }
   }
 
@@ -26,6 +42,11 @@
     justify-content: center;
     align-items: center;
 
+    @include respond(tab-land) {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+    }
+
     &-input {
     width: 70%;
     height: 3rem;
@@ -34,6 +55,10 @@
     border: 1px solid $color-grey-light;
     border-radius: 20px;
     transition: .1s ease-in-out;
+
+    @media only screen and (max-width: 350px) {
+      width: 99%;
+    }
 
     &:focus {
       outline: none;
@@ -57,6 +82,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include respond(tab-land) {
+      grid-row: 3/-1;
+      grid-column: 1/-1;
+    }
 
     &-text {
       letter-spacing: 2px;

@@ -8,6 +8,10 @@
 
   display: grid;
   grid-template-rows: 15rem 100vh 22rem;
+
+  @include respond(tab-land) {
+    grid-template-rows: 22rem 100vh 22rem;
+  }
 }
 
 .container {

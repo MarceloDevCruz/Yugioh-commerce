@@ -1,3 +1,6 @@
+.util-bg-transparese {
+  background-color: transparent !important; }
+
 *,
 *::after,
 *::before {
@@ -63,7 +66,22 @@ input {
   .btn-search__icon {
     font-size: 1.7rem; }
 
+.list__ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .list__ul {
+      font-size: .7rem; } }
+
+.list__li {
+  list-style: circle;
+  cursor: pointer; }
+
 .content {
+  position: relative;
   min-height: 100vh;
   height: 100%;
   max-width: 140rem;
@@ -195,6 +213,70 @@ input {
         top: -10%;
         right: 0%;
         z-index: 20; }
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 33vw;
+  margin-top: -1.7rem;
+  z-index: 40; }
+  @media only screen and (max-width: 1440px) {
+    .sidebar {
+      width: 40vw; } }
+  @media only screen and (max-width: 56.25em) {
+    .sidebar {
+      width: 100vw; } }
+  .sidebar__btn {
+    font-size: 3.5rem;
+    background-color: transparent; }
+    .sidebar__btn-list {
+      color: #87B1B7;
+      position: fixed;
+      z-index: 10;
+      top: 5%;
+      left: 2%;
+      z-index: 10; }
+    .sidebar__btn-close {
+      color: #C05149;
+      position: absolute;
+      top: 5;
+      right: 0;
+      z-index: 10; }
+  .sidebar__container {
+    position: relative;
+    display: grid;
+    height: 100%;
+    min-height: 60rem;
+    grid-template-rows: 20% 80%;
+    background-color: #F5F7F5; }
+    @media only screen and (max-width: 1440px) {
+      .sidebar__container {
+        width: 40vw; } }
+    @media only screen and (max-width: 56.25em) {
+      .sidebar__container {
+        position: sticky;
+        width: 100vw; } }
+    @media only screen and (max-height: 570px) {
+      .sidebar__container {
+        overflow-y: scroll; } }
+    .sidebar__container-header {
+      grid-row: 1/2;
+      background-color: #232125;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      @media only screen and (max-height: 570px) {
+        .sidebar__container-header {
+          height: 5rem; } }
+    .sidebar__container-filter {
+      grid-row: 2/-1; }
+  .sidebar__title {
+    font-weight: 200;
+    font-size: 2.2rem; }
+    @media only screen and (max-height: 570px) {
+      .sidebar__title {
+        font-size: 1.5rem; } }
 
 .home {
   grid-row: 2/3; }

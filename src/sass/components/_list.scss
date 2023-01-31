@@ -1,0 +1,19 @@
+.list {
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 0 3rem;
+
+    @include respond(tab-port) {
+      font-size: .7rem;
+    }
+  }
+
+  &__li {
+    list-style: circle;
+    cursor: pointer;
+  }
+}

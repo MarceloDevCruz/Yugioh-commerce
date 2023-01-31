@@ -13,15 +13,15 @@
 @import './components/form';
 @import './components/input';
 @import './components/list';
-@import './layouts/background';
-@import './layouts/container';
+@import './components/card';
 
 // LAYOUTS
-@import './layouts/card';
 @import './layouts/footer';
 @import './layouts/header';
 @import './layouts/shopCard';
 @import './layouts/sidebar';
+@import './layouts/background';
+@import './layouts/container';
 
 // PAGES
 @import './pages/home';

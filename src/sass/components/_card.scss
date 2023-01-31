@@ -1,0 +1,37 @@
+.card {
+
+  width: 12rem;
+  padding: .5rem 0 1rem 0;
+  background-color: $color-primary-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: .8rem;
+  box-shadow: 0 0 1rem rgba($color-black, .3);
+
+  &:hover  &__img {
+    transform: scale(1.05);
+  }
+
+  &__img {
+    width: 10rem;
+    height: 15rem;
+    transition: .1s all ease-in;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  &__name {
+    margin-top: .6rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__price {
+    font-size: 1.1rem;
+    color: $color-tertiary;
+    margin-bottom: .6rem;
+  }
+}

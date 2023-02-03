@@ -13,10 +13,10 @@ const Home = () => {
   const [offSet, setOffSet] = useState(0);
 
   // Variáveis de paginação
-  const limite = 70;
+  const limite = 63;
   const total = data.length;
 
-  const test = [];
+  const porPagina = [];
 
   useEffect(() => {
     axios
@@ -28,8 +28,11 @@ const Home = () => {
   }, []);
 
   for (let i = offSet; i < offSet + limite; i++) {
-    test.push(data[i]);
+    porPagina.push(data[i]);
+    if (data[i] === undefined) return;
   }
+
+  console.log(porPagina);
 
   return (
     <div className="home">
@@ -43,7 +46,7 @@ const Home = () => {
       {data && (
         <>
           <div className="home__card">
-            {test.map((card) => (
+            {porPagina.map((card) => (
               <Card card={card} key={card.id} />
             ))}
           </div>

@@ -5,8 +5,8 @@ const MAXIMO_ESQUERDA = (MAXIMO_ITEMS - 1) / 2;
 
 const Pagination = ({ limite, total, offSet, setOffSet }) => {
   const paginaAtual = offSet ? offSet / limite + 1 : 1;
-  const totalPaginas = Math.ceil(total / limite);
-  const primeiraPagina = Math.max(paginaAtual - MAXIMO_ESQUERDA, 1);
+  const totalPaginas = Math.ceil(total / limite) - 1;
+  const primeiraPagina = Math.max(totalPaginas - (MAXIMO_ITEMS - 1), 1);
   const primera = Math.min(
     Math.max(paginaAtual - MAXIMO_ESQUERDA, 1),
     primeiraPagina

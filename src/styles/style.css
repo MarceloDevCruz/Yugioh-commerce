@@ -71,6 +71,23 @@ input {
   .btn--tertiary:hover {
     background-image: linear-gradient(to left, #C05149, #792f2a); }
 
+.btn--pagination {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #f9e19f;
+  color: #518087; }
+  @media only screen and (max-width: 37.5em) {
+    .btn--pagination {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1rem; } }
+  @media only screen and (max-width: 350px) {
+    .btn--pagination {
+      width: 1rem;
+      height: 1rem;
+      font-size: .7rem; } }
+
 .btn-search {
   position: absolute;
   top: 44%;
@@ -315,6 +332,23 @@ input {
 
 .container {
   overflow: hidden; }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem; }
+  .pagination__list {
+    margin: 1rem; }
+    @media only screen and (max-width: 700px) {
+      .pagination__list {
+        margin: .5rem; } }
+    @media only screen and (max-width: 450px) {
+      .pagination__list {
+        margin: .2rem; } }
+  .pagination--activity {
+    background-color: transparent;
+    color: #C05149; }
 
 .home {
   grid-row: 2/3; }

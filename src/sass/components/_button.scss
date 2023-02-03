@@ -29,6 +29,27 @@
     }
   }
 
+  &--pagination {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    @include respond(phone) {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+      width: 1rem;
+      height: 1rem;
+      font-size: .7rem;
+    }
+
+    background-color: $color-opc1-light;
+    color: $color-secondary-dark;
+  }
+
   &-search {
     position: absolute;
     top: 44%;

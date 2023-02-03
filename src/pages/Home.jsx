@@ -16,6 +16,8 @@ const Home = () => {
   const limite = 70;
   const total = data.length;
 
+  const test = [];
+
   useEffect(() => {
     axios
       .get(api)
@@ -25,7 +27,9 @@ const Home = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(offSet);
+  for (let i = offSet; i < offSet + limite; i++) {
+    test.push(data[i]);
+  }
 
   return (
     <div className="home">
@@ -33,20 +37,16 @@ const Home = () => {
       {data && (
         <>
           <div className="home__card">
-            {!data
-              ? 'Carregando'
-              : data
-                  .filter((card, i) => offSet + i < offSet + limite)
-                  .map((card, i) => <Card card={card} key={card.id} />)}
+            {test.map((card) => (
+              <Card card={card} key={card.id} />
+            ))}
           </div>
-          {data && (
-            <Pagination
-              limite={limite}
-              total={total}
-              offSet={offSet}
-              setOffSet={setOffSet}
-            />
-          )}
+          <Pagination
+            limite={limite}
+            total={total}
+            offSet={offSet}
+            setOffSet={setOffSet}
+          />
         </>
       )}
     </div>

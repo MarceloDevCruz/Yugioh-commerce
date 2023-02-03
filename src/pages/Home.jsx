@@ -34,6 +34,12 @@ const Home = () => {
   return (
     <div className="home">
       <h1 className="home__title">Yugioh card Shop</h1>
+      <Pagination
+        limite={limite}
+        total={total}
+        offSet={offSet}
+        setOffSet={setOffSet}
+      />
       {data && (
         <>
           <div className="home__card">

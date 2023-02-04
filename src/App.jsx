@@ -1,16 +1,12 @@
 import React from 'react';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
+import Router from './routes/Router';
 
 function App() {
   return (
     <div className="container">
       <div className="content">
-        <Header />
-        <Home />
-        <Footer />
+        <Router />
       </div>
     </div>
   );

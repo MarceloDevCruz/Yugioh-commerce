@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import dolarsToBrazilianReal from '../utils/dolarsToBrazilianReal';
 
+import IndividualCard from '../pages/IndividualCard';
+
 const Card = ({ card }) => {
+  const [clickCard, setClickCard] = useState(false);
+
   return (
     <div className="card">
       <img

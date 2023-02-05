@@ -1,14 +1,20 @@
 import React from 'react';
 
 import Router from './routes/Router';
+import CreateContext from './context/CreateContext';
+import GlobalContext from './context/GlobalContext';
 
 function App() {
+  const context = GlobalContext();
+
   return (
-    <div className="container">
-      <div className="content">
-        <Router />
+    <CreateContext.Provider value={context}>
+      <div className="container">
+        <div className="content">
+          <Router />
+        </div>
       </div>
-    </div>
+    </CreateContext.Provider>
   );
 }
 

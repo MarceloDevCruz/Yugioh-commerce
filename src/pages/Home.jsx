@@ -1,61 +1,32 @@
-import React from 'react';
-import api from '../config/api';
-import axios from 'axios';
-import dolarsToBrazilianReal from '../utils/dolarsToBrazilianReal';
+import React, { useContext, useEffect } from 'react';
 
 import Card from '../components/Card';
 import Pagination from '../components/Pagination';
-
-import { useState, useEffect } from 'react';
+import { CreateContext } from '../context/CreateContext';
 
 const Home = () => {
-  const [data, setData] = useState('');
-  const [offSet, setOffSet] = useState(0);
-
-  // Variáveis de paginação
-  const limite = 63;
-  const total = data.length;
-
-  const porPagina = [];
+  const context = useContext(CreateContext);
+  console.log(context.porPagina);
 
   useEffect(() => {
-    axios
-      .get(api)
-      .then((res) => {
-        setData(res.data.data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  for (let i = offSet; i < offSet + limite; i++) {
-    porPagina.push(data[i]);
-    if (data[i] === undefined) return;
-  }
-
-  console.log(porPagina);
+    for (let i = context.offSet; i < context.offSet + context.limite; i++) {
+      context.porPagina.push(context.data[i]);
+      if (context.data[i] === undefined) return;
+    }
+  }, [context.offSet]);
 
   return (
     <div className="home">
       <h1 className="home__title">Yugioh card Shop</h1>
-      <Pagination
-        limite={limite}
-        total={total}
-        offSet={offSet}
-        setOffSet={setOffSet}
-      />
-      {data && (
+      <Pagination />
+      {context.data && (
         <>
           <div className="home__card">
-            {porPagina.map((card) => (
+            {context.data.map((card) => (
               <Card card={card} key={card.id} />
             ))}
           </div>
-          <Pagination
-            limite={limite}
-            total={total}
-            offSet={offSet}
-            setOffSet={setOffSet}
-          />
+          <Pagination />
         </>
       )}
     </div>

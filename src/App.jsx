@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Router from './routes/Router';
-import CreateContext from './context/CreateContext';
+import { CreateContext } from './context/CreateContext';
 import GlobalContext from './context/GlobalContext';
 
 function App() {

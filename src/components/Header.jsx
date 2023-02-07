@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BsSearch, BsCart, BsFillCircleFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 import Sidebar from './Sidebar';
 import logo from '../assets/img/Logo.svg';
 import { homePage } from '../utils/navigate';
+import { CreateContext } from '../context/CreateContext';
 
 const Header = () => {
   const navigate = useNavigate();
+
+  const context = useContext(CreateContext);
 
   return (
     <>
@@ -35,7 +38,9 @@ const Header = () => {
           <div className="header__card-container">
             <BsCart className="header__card-container__cart" />
             <BsFillCircleFill className="header__card-container__ball" />
-            <p className="header__card-container__lenght">10</p>
+            <p className="header__card-container__lenght">
+              {context.cart.length}
+            </p>
           </div>
         </div>
       </header>

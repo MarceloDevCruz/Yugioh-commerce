@@ -8,7 +8,7 @@ const Pagination = () => {
   const MAXIMO_ESQUERDA = (MAXIMO_ITEMS - 1) / 2;
 
   const paginaAtual = context.offSet ? context.offSet / context.limite + 1 : 1;
-  const totalPaginas = Math.ceil(context.total / context.limite) - 1;
+  const totalPaginas = Math.ceil(context.total / context.limite);
   const primeiraPagina = Math.max(totalPaginas - (MAXIMO_ITEMS - 1), 1);
   const primera = Math.min(
     Math.max(paginaAtual - MAXIMO_ESQUERDA, 1),

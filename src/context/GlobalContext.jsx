@@ -5,6 +5,8 @@ import axios from 'axios';
 const GlobalContext = () => {
   const [data, setData] = useState([]);
   const [offSet, setOffSet] = useState(0);
+  const [cart, setCart] = useState([]);
+
   const limite = 63;
   const total = data.length;
 
@@ -17,7 +19,7 @@ const GlobalContext = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  return { data, setData, offSet, setOffSet, limite, total, porPagina };
+  return { data, setData, offSet, setOffSet, limite, total, cart, setCart };
 };
 
 export default GlobalContext;

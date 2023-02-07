@@ -7,8 +7,6 @@ import { CreateContext } from '../context/CreateContext';
 const Home = () => {
   const context = useContext(CreateContext);
 
-  console.log(context.porPagina);
-
   return (
     <div className="home">
       <h1 className="home__title">Yugioh card Shop</h1>

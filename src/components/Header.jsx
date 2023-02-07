@@ -1,16 +1,24 @@
 import React from 'react';
 import { BsSearch, BsCart, BsFillCircleFill } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 
 import Sidebar from './Sidebar';
-
 import logo from '../assets/img/Logo.svg';
+import { homePage } from '../utils/navigate';
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <header className="header">
         <div className="header__logo">
-          <img src={logo} alt="Yugioh logo" className="header__logo-img" />
+          <img
+            src={logo}
+            alt="Yugioh logo"
+            className="header__logo-img"
+            onClick={() => homePage(navigate)}
+          />
         </div>
         <form className="header__search">
           <input

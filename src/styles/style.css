@@ -421,3 +421,62 @@ input {
     @media only screen and (max-width: 440px) {
       .home__card {
         grid-template-columns: 1fr; } }
+
+.individualCard {
+  grid-row: 2/3;
+  min-height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20rem 0 20rem; }
+  .individualCard__photo {
+    border-radius: 20px; }
+  .individualCard__details {
+    margin-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 2rem 2fr 2rem repeat(3, 1fr); }
+    .individualCard__details-title {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      justify-self: center; }
+    .individualCard__details-span--1 {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+      justify-self: flex-start; }
+    .individualCard__details-span--2 {
+      grid-column: 1/2;
+      grid-row: 4/5;
+      justify-self: center;
+      color: #C05149; }
+    .individualCard__details-span--3 {
+      grid-column: 2/-1;
+      grid-row: 4/5;
+      justify-self: center;
+      color: #C05149; }
+    .individualCard__details-description {
+      grid-column: 1/-1;
+      grid-row: 3/4;
+      justify-self: center;
+      font-weight: 200;
+      font-size: 1.3rem;
+      letter-spacing: 1.8px; }
+    .individualCard__details-type {
+      grid-column: 1/2;
+      grid-row: 5/6;
+      justify-self: center; }
+    .individualCard__details-race {
+      grid-column: 2/-1;
+      grid-row: 5/6;
+      justify-self: center; }
+    .individualCard__details-price {
+      grid-column: 1/-1;
+      grid-row: 6/7;
+      justify-self: center; }
+    .individualCard__details-btn {
+      grid-column: 1/-1;
+      grid-row: 7/-1;
+      justify-self: center;
+      width: 20rem;
+      height: 4rem;
+      font-size: 1.5rem; }

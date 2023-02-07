@@ -18,6 +18,13 @@ const GlobalContext = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  useEffect(() => {
+    for (let i = offSet; i < offSet + limite; i++) {
+      porPagina.push(data[i]);
+      if (data[i] === undefined) return;
+    }
+  }, [porPagina, offSet]);
+
   return { data, setData, offSet, setOffSet, limite, total, porPagina };
 };
 

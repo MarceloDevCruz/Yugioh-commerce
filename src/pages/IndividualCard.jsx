@@ -37,7 +37,10 @@ const IndividualCard = () => {
                 Preço: R$:
                 {dolarsToBrazilianReal(card.card_prices[0].ebay_price)}
               </h3>
-              <button className="btn btn--tertiary individualCard__details-btn">
+              <button
+                onClick={() => context.addToCart(card)}
+                className="btn btn--tertiary individualCard__details-btn"
+              >
                 Comprar
               </button>
             </div>

@@ -9,7 +9,6 @@ import { CreateContext } from '../context/CreateContext';
 
 const Header = () => {
   const navigate = useNavigate();
-
   const context = useContext(CreateContext);
 
   return (
@@ -38,9 +37,7 @@ const Header = () => {
           <div className="header__card-container">
             <BsCart className="header__card-container__cart" />
             <BsFillCircleFill className="header__card-container__ball" />
-            <p className="header__card-container__lenght">
-              {context.cart.length}
-            </p>
+            <p className="header__card-container__lenght">{context.qtd}</p>
           </div>
         </div>
       </header>

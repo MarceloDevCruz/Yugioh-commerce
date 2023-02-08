@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <div className="home">
       <h1 className="home__title">Yugioh card Shop</h1>
+      <p>{context.totalPrice}</p>
       {context.data ? (
         <>
           <Pagination />

@@ -1,0 +1,14 @@
+.cart {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  z-index: 30;
+  transition: 5s ease-in;
+
+  background-color: $color-primary-dark;
+  color: $color-tertiary;
+  height: 30rem;
+  width: 30rem;
+  box-shadow: 0 0 2rem 1rem rgba($color-black, .2);
+  border-radius: 20px;
+}

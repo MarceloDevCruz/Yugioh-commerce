@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { BsSearch, BsCart, BsFillCircleFill } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 import Sidebar from './Sidebar';
+import Cart from './Cart';
 import logo from '../assets/img/Logo.svg';
 import { homePage } from '../utils/navigate';
 import { CreateContext } from '../context/CreateContext';
@@ -11,8 +12,14 @@ const Header = () => {
   const navigate = useNavigate();
   const context = useContext(CreateContext);
 
+  const [showCard, setShowCard] = useState(false);
+  const handleShowCard = () => {
+    setShowCard(!showCard);
+  };
+
   return (
     <>
+      {showCard && <Cart handleShowCard={handleShowCard} />}
       <header className="header">
         <div className="header__logo">
           <img
@@ -34,7 +41,7 @@ const Header = () => {
         </form>
         <div className="header__card">
           <p className="header__card-text">Seu carrinho</p>
-          <div className="header__card-container">
+          <div className="header__card-container" onClick={handleShowCard}>
             <BsCart className="header__card-container__cart" />
             <BsFillCircleFill className="header__card-container__ball" />
             <p className="header__card-container__lenght">{context.qtd}</p>

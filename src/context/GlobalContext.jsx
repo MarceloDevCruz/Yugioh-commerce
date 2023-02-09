@@ -33,7 +33,29 @@ const GlobalContext = () => {
     setTotalPrice(Number(priceFixed(totalPrice + price)));
   };
 
-  const removeToCart = (card) => {};
+  const removeToCart = (card) => {
+    const copyCart = [...cart];
+    const newCard = card;
+    const price = Number(
+      dolarsToBrazilianReal(newCard.card_prices[0].ebay_price)
+    );
+
+    const item = copyCart.find((product) => product.id === newCard.id);
+
+    if (item.qtd > 1) {
+      item.qtd = item.qtd - 1;
+      setCart(copyCart);
+      setQtd(qtd - 1);
+      setTotalPrice(Number(priceFixed(totalPrice - price)));
+    } else if (item.qtd === 1) {
+      const cartFiltered = copyCart.filter(
+        (product) => product.id !== newCard.id
+      );
+      setCart(cartFiltered);
+      setQtd(qtd - 1);
+      setTotalPrice(Number(priceFixed(totalPrice - price)));
+    }
+  };
 
   const limite = 64;
   const total = data.length;

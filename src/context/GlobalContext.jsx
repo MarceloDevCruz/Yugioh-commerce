@@ -10,6 +10,7 @@ const GlobalContext = () => {
   const [cart, setCart] = useState([]);
   const [qtd, setQtd] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [theme, setTheme] = useState('light');
 
   const addToCart = (card) => {
     const copyCart = [...cart];
@@ -82,6 +83,8 @@ const GlobalContext = () => {
     removeToCart,
     qtd,
     totalPrice,
+    theme,
+    setTheme,
   };
 };
 

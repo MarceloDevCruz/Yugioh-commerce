@@ -266,6 +266,28 @@ input {
       justify-self: center;
       cursor: pointer; }
 
+.toggle {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  height: 1.4rem;
+  width: 3.3rem;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid rgba(81, 128, 135, 0.3);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer; }
+  .toggle__sun {
+    font-size: 1.2rem;
+    color: #F3C33F;
+    transform: translateX(2px); }
+  .toggle__moon {
+    font-size: 1rem;
+    color: #87B1B7;
+    transform: translateX(30px) rotate(210deg); }
+
 .footer {
   width: 100%;
   height: 22rem;

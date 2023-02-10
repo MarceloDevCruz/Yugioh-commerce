@@ -12,7 +12,13 @@ const IndividualCard = () => {
   const cardDetails = context.data.filter((card) => card.id === id);
 
   return (
-    <div className="individualCard">
+    <div
+      className={
+        context.theme === 'dark'
+          ? 'individualCard dark__individualCard'
+          : 'individualCard'
+      }
+    >
       {context.data &&
         cardDetails.map((card) => (
           <>

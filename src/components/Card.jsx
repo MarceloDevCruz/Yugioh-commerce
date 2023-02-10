@@ -11,7 +11,7 @@ const Card = ({ card }) => {
   const context = useContext(CreateContext);
 
   return (
-    <div className="card">
+    <div className={context.theme === 'dark' ? 'card dark__card' : 'card'}>
       <img
         className="card__img"
         src={card.card_images[0].image_url_small}

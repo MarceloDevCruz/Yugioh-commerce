@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BsGithub } from 'react-icons/bs';
+import { CreateContext } from '../context/CreateContext';
 
 const Footer = () => {
+  const context = useContext(CreateContext);
+
   return (
-    <footer className="footer">
+    <footer
+      className={context.theme === 'dark' ? 'footer dark__footer' : 'footer'}
+    >
       <div className="footer__createdby">
         <p className="footer__createdby-text">By Marcelo Ferreira Cruz</p>
         <BsGithub className="footer__icon" />

@@ -4,9 +4,6 @@ import { CreateContext } from '../context/CreateContext';
 
 const ToggleTheme = () => {
   const context = useContext(CreateContext);
-
-  console.log(context.theme);
-
   const [button, setButton] = useState(true);
 
   const handleTheme = () => {

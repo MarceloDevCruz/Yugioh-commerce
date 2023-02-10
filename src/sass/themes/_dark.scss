@@ -1,0 +1,55 @@
+.dark {
+
+  &__header {
+    background-color: $color-black;
+
+    &__search-input {
+      color: $color-primary;
+    }
+  }
+
+  &__home {
+    background-color: $color-opc2-dark;
+
+    &__title {
+      background-image: linear-gradient(to right,
+      $color-opc1-light, $color-opc1-dark);
+    }
+  }
+
+  &__card {
+    background-color: $color-opc2;
+  }
+
+  &__footer {
+    background-color: $color-black;
+  }
+
+  &__individualCard {
+    background-color: $color-opc2-dark;
+  }
+
+  &__cart {
+    background-color: $color-opc2-light;
+  }
+
+  &__sidebar__title {
+    color: $color-opc2;
+  }
+
+  &__sidebar__container {
+    background-color: $color-opc2-dark;
+
+    &-header {
+      background-color: $color-opc1;
+    }
+
+    &-filter {
+      background-color: $color-black;
+    }
+  }
+
+  &__content {
+    background-color: $color-opc2-dark;
+  }
+}

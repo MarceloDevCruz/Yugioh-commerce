@@ -8,8 +8,16 @@ const Home = () => {
   const context = useContext(CreateContext);
 
   return (
-    <div className="home">
-      <h1 className="home__title">Yugioh card Shop</h1>
+    <div className={context.theme === 'dark' ? 'home dark__home' : 'home'}>
+      <h1
+        className={
+          context.theme === 'dark'
+            ? 'home__title dark__home__title'
+            : 'home__title'
+        }
+      >
+        Yugioh card Shop
+      </h1>
       {context.data ? (
         <>
           <Pagination />

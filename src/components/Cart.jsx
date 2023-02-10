@@ -23,7 +23,10 @@ const Cart = ({ handleShowCard }) => {
   }, []);
 
   return (
-    <div className="cart" ref={cartRef}>
+    <div
+      className={context.theme === 'dark' ? 'cart dark__cart' : 'cart'}
+      ref={cartRef}
+    >
       {context.cart.length !== 0 ? (
         <>
           <h2 className="cart__total">Total: R${context.totalPrice}</h2>

@@ -10,7 +10,11 @@ function App() {
   return (
     <CreateContext.Provider value={context}>
       <div className="container">
-        <div className="content">
+        <div
+          className={
+            context.theme === 'dark' ? 'content dark__content' : 'content'
+          }
+        >
           <Router />
         </div>
       </div>

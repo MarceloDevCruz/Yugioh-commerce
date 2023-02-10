@@ -20,7 +20,9 @@ const Header = () => {
   return (
     <>
       {showCard && <Cart handleShowCard={handleShowCard} />}
-      <header className="header">
+      <header
+        className={context.theme === 'dark' ? 'header dark__header' : 'header'}
+      >
         <div className="header__logo">
           <img
             src={logo}
@@ -32,7 +34,11 @@ const Header = () => {
         <form className="header__search">
           <input
             type="text"
-            className="header__search-input"
+            className={
+              context.theme === 'dark'
+                ? 'header__search-input dark__header__search-input'
+                : 'header__search-input'
+            }
             placeholder="Procure por card..."
           />
           <button className="btn-search">

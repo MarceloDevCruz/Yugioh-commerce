@@ -6,6 +6,7 @@ import priceFixed from '../utils/priceFixed';
 
 const GlobalContext = () => {
   const [data, setData] = useState([]);
+  const [copy, setCopy] = useState([]);
   const [offSet, setOffSet] = useState(0);
   const [cart, setCart] = useState([]);
   const [qtd, setQtd] = useState(0);
@@ -61,11 +62,24 @@ const GlobalContext = () => {
   const limite = 64;
   const total = data.length;
 
+  const filterCards = (type) => {
+    if (type === 'default') {
+      setData([]);
+      setData(copy);
+      return;
+    }
+    setData([]);
+    setData(copy);
+    const filtered = data.filter((card) => card.type === type);
+    setData(filtered);
+  };
+
   useEffect(() => {
     axios
       .get(api)
       .then((res) => {
         setData(res.data.data);
+        setCopy(res.data.data);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -85,6 +99,9 @@ const GlobalContext = () => {
     totalPrice,
     theme,
     setTheme,
+    filterCards,
+    copy,
+    setCopy,
   };
 };
 

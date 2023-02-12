@@ -12,6 +12,7 @@ const GlobalContext = () => {
   const [qtd, setQtd] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [theme, setTheme] = useState('light');
+  const [filter, setFilter] = useState([]);
 
   const addToCart = (card) => {
     const copyCart = [...cart];
@@ -63,15 +64,13 @@ const GlobalContext = () => {
   const total = data.length;
 
   const filterCards = (type) => {
+    const filtered = data.filter((card) => card.type === type);
+    setFilter(filtered);
+
     if (type === 'default') {
-      setData([]);
-      setData(copy);
+      setFilter([]);
       return;
     }
-    setData([]);
-    setData(copy);
-    const filtered = data.filter((card) => card.type === type);
-    setData(filtered);
   };
 
   useEffect(() => {
@@ -102,6 +101,8 @@ const GlobalContext = () => {
     filterCards,
     copy,
     setCopy,
+    filter,
+    setFilter,
   };
 };
 

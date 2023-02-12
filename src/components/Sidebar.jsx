@@ -232,7 +232,14 @@ const Sidebar = () => {
                   >
                     XYZ monster
                   </li>
-                  <li className="list__li">XYZ pendulum effect monster</li>
+                  <li
+                    onClick={() =>
+                      context.filterCards('XYZ Pendulum Effect Monster')
+                    }
+                    className="list__li"
+                  >
+                    XYZ pendulum effect monster
+                  </li>
                 </ul>
               </div>
             </div>

@@ -474,7 +474,8 @@ input {
       grid-template-rows: 22rem max-content  22rem; } }
 
 .container {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #232125; }
 
 .pagination {
   display: flex;
@@ -494,7 +495,8 @@ input {
     color: #C05149; }
 
 .home {
-  grid-row: 2/3; }
+  grid-row: 2/3;
+  min-height: 25rem; }
   .home__title {
     text-align: center;
     margin: 1rem auto;

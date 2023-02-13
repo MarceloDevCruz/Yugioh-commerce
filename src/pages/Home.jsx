@@ -7,6 +7,12 @@ import { CreateContext } from '../context/CreateContext';
 const Home = () => {
   const context = useContext(CreateContext);
 
+  const filterCardsInput =
+    context.data &&
+    context.data
+      ?.filter((card) => card.type.includes(context.searchType))
+      .filter((card) => card.name.includes(context.search));
+
   return (
     <div className={context.theme === 'dark' ? 'home dark__home' : 'home'}>
       <h1
@@ -18,11 +24,11 @@ const Home = () => {
       >
         Yugioh card Shop
       </h1>
-      {context.data ? (
+      {context.data && (
         <>
           <Pagination />
           <div className="home__card">
-            {context.data
+            {filterCardsInput
               .filter(
                 (card, i) =>
                   i > context.offSet && i < context.offSet + context.limite
@@ -33,8 +39,6 @@ const Home = () => {
           </div>
           <Pagination />
         </>
-      ) : (
-        <p>Carregando...</p>
       )}
     </div>
   );

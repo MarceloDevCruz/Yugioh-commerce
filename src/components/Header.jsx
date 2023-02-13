@@ -8,7 +8,7 @@ import logo from '../assets/img/Logo.svg';
 import { homePage } from '../utils/navigate';
 import { CreateContext } from '../context/CreateContext';
 
-const Header = () => {
+const Header = (props) => {
   const navigate = useNavigate();
   const context = useContext(CreateContext);
 
@@ -40,6 +40,8 @@ const Header = () => {
                 : 'header__search-input'
             }
             placeholder="Procure por card..."
+            value={props.search}
+            onChange={(e) => props.setSearch(e.target.value)}
           />
           <button className="btn-search">
             <BsSearch className="btn-search__icon" />

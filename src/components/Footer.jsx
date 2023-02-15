@@ -11,7 +11,12 @@ const Footer = () => {
     >
       <div className="footer__createdby">
         <p className="footer__createdby-text">By Marcelo Ferreira Cruz</p>
-        <BsGithub className="footer__icon" />
+        <a
+          target="_blank"
+          href="https://github.com/MarceloDevCruz/Yugioh-commerce"
+        >
+          <BsGithub className="footer__icon" />
+        </a>
       </div>
       <ul className="footer__list">
         <li className="footer__list-item">Contact</li>

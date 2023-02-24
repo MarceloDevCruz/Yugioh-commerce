@@ -31,7 +31,7 @@ const Home = () => {
             {filterCardsInput
               .filter(
                 (card, i) =>
-                  i > context.offSet && i < context.offSet + context.limite
+                  i >= context.offSet && i < context.offSet + context.limite
               )
               .map((card) => (
                 <Card card={card} key={card.id} />
